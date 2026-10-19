@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <% viragok.forEach(virag => { %>
+            <li> <%= virag.fajta %> <%= virag.szin %> <%= virag.ar %></li>
+        <% }) %>
+    </ul>
+    <form method="post">
+        <input type="text" name="fajta"> <br>
+        <select name="szin" id="">
+            <option value="piros">Piros</option>
+            <option value="sárga">Sárga</option>
+            <option value="fehér">Fehér</option>
+        </select><br>
+        <input type="number" name="ar"> <br>
+
+        <p class="errormessage">
+            <%= locals.error %>
+        </p>
+        <button type="submit">Új virág</button>
+    </form>
+ 
+</body>
+</html>
